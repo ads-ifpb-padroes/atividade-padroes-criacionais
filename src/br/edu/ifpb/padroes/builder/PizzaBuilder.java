@@ -2,7 +2,7 @@ package br.edu.ifpb.padroes.builder;
 
 public class PizzaBuilder {
 
-    private Massa massa;
+    private String massa;
     private final int quantidade_maxima = 3;
     private static int ingredientes;
     private boolean calabresa;
@@ -12,9 +12,14 @@ public class PizzaBuilder {
     private boolean azeitona;
     private boolean cebola;
 
+    public PizzaBuilder comMassaPan(){
+        this.massa = "PAN";
+        quantidadeIngredientes();
+        return this;
+    }
 
-    public PizzaBuilder comMassa(Massa massa) {
-        this.massa = massa;
+    public PizzaBuilder comMassaTradicional(){
+        this.massa = "TRADICIONAL";
         quantidadeIngredientes();
         return this;
     }
@@ -55,16 +60,16 @@ public class PizzaBuilder {
         return this;
     }
 
-    public Pizza build(){
+    public Pizza build() {
         return new Pizza(massa, ingredientes, calabresa,
                 queijo, oregano, carne, azeitona, cebola);
     }
 
-    private void quantidadeIngredientes(){
+    private void quantidadeIngredientes() {
         ingredientes++;
-        if(ingredientes>quantidade_maxima){
+        if (ingredientes > quantidade_maxima) {
             try {
-                throw  new IngredientesException("quantidade máxima de ingredientes atingida!");
+                throw new IngredientesException("quantidade máxima de ingredientes atingida!");
             } catch (IngredientesException e) {
                 System.out.println(e.getMessage());
             }

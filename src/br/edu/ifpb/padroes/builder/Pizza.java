@@ -1,7 +1,7 @@
 package br.edu.ifpb.padroes.builder;
 
 public class Pizza {
-    private Massa massa;
+    private String massa;
     private int ingredientes;
     private boolean calabresa;
     private boolean queijo;
@@ -10,7 +10,7 @@ public class Pizza {
     private boolean azeitona;
     private boolean cebola;
 
-    public Pizza(Massa massa, int ingredientes, boolean calabresa,
+    public Pizza(String massa, int ingredientes, boolean calabresa,
                  boolean queijo, boolean oregano, boolean carne,
                  boolean azeitona, boolean cebola) {
         this.massa = massa;

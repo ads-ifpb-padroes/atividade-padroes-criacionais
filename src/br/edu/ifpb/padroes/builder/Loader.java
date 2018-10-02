@@ -5,7 +5,7 @@ public class Loader {
 
         Pizza pizza = new PizzaBuilder()
                 .comCalabresa()
-                .comMassa(Massa.PAN)
+                .comMassaPan()
                 .comCarne()
                 .comCebola()
                 .build();
