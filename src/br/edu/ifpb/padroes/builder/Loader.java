@@ -4,9 +4,10 @@ public class Loader {
     public static void main(String[] args) {
 
         Pizza pizza = new PizzaBuilder()
-                .comCalabresa(true)
+                .comCalabresa()
                 .comMassa(Massa.PAN)
-                .comCarne(true)
+                .comCarne()
+                .comCebola()
                 .build();
 
         System.out.println(pizza.toString());

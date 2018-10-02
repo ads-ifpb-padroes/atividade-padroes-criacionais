@@ -9,7 +9,7 @@ public class PizzaBuilder {
     private boolean queijo;
     private boolean oregano;
     private boolean carne;
-    private boolean milho;
+    private boolean azeitona;
     private boolean cebola;
 
 
@@ -19,45 +19,45 @@ public class PizzaBuilder {
         return this;
     }
 
-    public PizzaBuilder comCalabresa(boolean calabresa) {
-        this.calabresa = calabresa;
+    public PizzaBuilder comCalabresa() {
+        this.calabresa = true;
         quantidadeIngredientes();
         return this;
     }
 
-    public PizzaBuilder comQueijo(boolean queijo) {
-        this.queijo = queijo;
+    public PizzaBuilder comQueijo() {
+        this.queijo = true;
         quantidadeIngredientes();
         return this;
     }
 
-    public PizzaBuilder comOregano(boolean oregano) {
-        this.oregano = oregano;
+    public PizzaBuilder comOregano() {
+        this.oregano = true;
         quantidadeIngredientes();
         return this;
     }
 
-    public PizzaBuilder comCarne(boolean carne) {
-        this.carne = carne;
+    public PizzaBuilder comCarne() {
+        this.carne = true;
         quantidadeIngredientes();
         return this;
     }
 
-    public PizzaBuilder comMilho(boolean milho) {
-        this.milho = milho;
+    public PizzaBuilder comAzeitona() {
+        this.azeitona = true;
         quantidadeIngredientes();
         return this;
     }
 
-    public PizzaBuilder comCebola(boolean cebola) {
-        this.cebola = cebola;
+    public PizzaBuilder comCebola() {
+        this.cebola = true;
         quantidadeIngredientes();
         return this;
     }
 
     public Pizza build(){
         return new Pizza(massa, ingredientes, calabresa,
-                queijo, oregano, carne, milho, cebola);
+                queijo, oregano, carne, azeitona, cebola);
     }
 
     private void quantidadeIngredientes(){
